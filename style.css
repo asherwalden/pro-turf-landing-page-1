@@ -1,0 +1,139 @@
+/* ========================================
+   1. Variables and Base Styles
+   ======================================== */
+
+:root {
+    --color-primary: #cc2229;
+    --color-primary-light: #ea1b2a;
+    --color-primary-dark: #ad0015;
+    --color-secondary: #71a534;
+    --color-secondary-light: #8dc642;
+    --color-secondary-dark: #448e03;
+    --color-tertiary: #efc807;
+    --color-light: #dcdddb;
+    --color-dark: #252823;
+}
+
+html {
+    background-color: rgb(253, 253, 253);
+    font-family: sans-serif;
+    font-size: 62.5%; /* 1rem = 10px */
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0, 0, 0, 0.004) 1px 1px 1px;
+    color: var(--color-dark); /* Default text color */
+}
+
+body {
+    margin: 0;
+    padding: 2rem; /* 20px padding */
+    line-height: 1.6;
+    font-size: 1.6rem; /* 16px */
+}
+
+/* ========================================
+   2. Reusable Components & Sections
+   ======================================== */
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    margin-top: 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.8rem;
+}
+
+.button--primary {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: 2px solid var(--color-primary);
+}
+
+.button--primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.button--secondary {
+    background-color: var(--color-secondary);
+    color: #fff;
+    border: 2px solid var(--color-secondary);
+    margin-left: 1.5rem;
+}
+
+.button--secondary:hover {
+    background-color: var(--color-secondary-dark);
+    border-color: var(--color-secondary-dark);
+}
+
+/* ========================================
+   3. Typography
+   ======================================== */
+
+h1 {
+    font-size: 4.8rem; /* 48px */
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 3.2rem; /* 32px */
+    color: var(--color-primary-dark);
+    margin-top: 3rem;
+    border-bottom: 2px solid var(--color-primary-dark);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 2.4rem; /* 24px */
+    color: var(--color-secondary-dark);
+    margin-top: 2.5rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* ========================================
+   4. Utility & Demo Classes
+   ======================================== */
+
+.color-box {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: 1rem;
+    border: 1px solid var(--color-dark);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 1.4rem;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-weight: bold;
+}
+
+.box-primary { background-color: var(--color-primary); }
+.box-secondary { background-color: var(--color-secondary); }
+.box-tertiary { background-color: var(--color-tertiary); color: var(--color-dark);}
+.box-light { background-color: var(--color-light); border-color: var(--color-dark); color: var(--color-dark); text-shadow: none;}
+.box-dark { background-color: var(--color-dark); }
