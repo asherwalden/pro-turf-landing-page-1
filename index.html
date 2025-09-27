@@ -3,15 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styled Elements Example</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Pro-Turf Indiana | Aeration & Seeding Services</title>
+    <meta name="description" content="Pro-Turf Indiana offers expert aeration and seeding services to revitalize your lawn. No contracts required and a 100% satisfaction guarantee. Get a free estimate today!">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#cc2229',
+                        'primary-dark': '#ad0015',
+                        'brand-secondary': '#71a534',
+                        'light': '#f8fafc', // A slightly lighter gray than before for better contrast
+                        'dark': '#252823',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* A little extra style for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        .package-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .package-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #71a534; /* brand-secondary color */
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Welcome to My Styled Page</h1>
+        <p>A demonstration of CSS variables and custom fonts.</p>
+    </header>
 
-    <h1>Welcome to our Page!</h1>
-    <p>This is where all your content will go.</p>
-    <p>This is where all your content will go.</p>
+    <div class="container">
+        <section>
+            <h2>About This Page</h2>
+            <p>
+                This HTML page is a simple example to showcase how the CSS variables and base font styles from our discussion can be applied. We're using a <code>sans-serif</code> font family and a responsive font sizing approach where <code>1rem</code> equals <code>10px</code> for easier development.
+            </p>
+            <p>
+                Notice how different elements take on the specified colors and font sizes. This modular approach makes it easy to maintain consistent styling across a large website.
+            </p>
+            <a href="#" class="button button--primary">Learn More</a>
+            <a href="#" class="button button--secondary">Contact Us</a>
+        </section>
 
-    <script src="script.js"></script>
+        <section>
+            <h2>Color Palette Showcase</h2>
+            <p>Here are some of the colors defined in our <code>:root</code> variables:</p>
+            <div>
+                <div class="color-box box-primary">Primary</div>
+                <div class="color-box box-secondary">Secondary</div>
+                <div class="color-box box-tertiary">Tertiary</div>
+                <div class="color-box box-light">Light</div>
+                <div class="color-box box-dark">Dark</div>
+                <div class="color-box box-custom-light">Custom Light</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Heading Styles</h2>
+            <p>The headings are styled using our defined colors and scaled font sizes.</p>
+            <h3>A Sub-Heading Using Secondary Color</h3>
+            <p>This paragraph text also uses the base font settings and the default dark color.</p>
+        </section>
+    </div>
+
 </body>
 </html>
